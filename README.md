@@ -1,2 +1,2 @@
 # comform
-Wrap &amp; fill out multiline comments in Python code, black-compliant
+Wrap & fill out multiline comments in Python code, black-compliant
