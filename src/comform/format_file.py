@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from textwrap import wrap
 from tokenize import COMMENT, NEWLINE, TokenInfo, tokenize, untokenize
-from typing import List, Sequence
+from typing import List, Sequence, Union
 
 import black
 import click
@@ -27,8 +27,9 @@ def cli(python_file: str, line_length):
         raise click.BadArgumentUsage(err)
 
 
-def format_file(python_file: Path, line_length: int = 88):
+def format_file(python_file: Union[Path, str], line_length: int = 88):
 
+    python_file = Path(python_file)
     if not python_file.exists() or python_file.suffix not in (".py", ".pyi"):
         raise ValueError(
             f'File "{python_file}" does not exist or is not a Python file.'
