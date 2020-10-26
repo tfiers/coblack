@@ -22,9 +22,16 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
     ],
-    install_requires=["click ~= 7.1"],
-    py_modules=["comform"],
-    entry_points={"console_scripts": ["comform = comform:format_comments"]},
+    python_requires=">= 3.8",  # For the `importlib` package used in __init__.py.
+    install_requires=[
+        "click ~= 7.1",  # black depends on "click>=7.1.2". ✔
+        "black >= 20",  # black uses calendar versioning (i.e. this means "a version from 2020 or later"). No idea if a later version
+        #               # will break the current API we use, but oh well, we'll hear
+        #               # about it then.
+    ],
+    packages=find_packages("src"),
+    package_dir={"": "src"},  # This means: "Root package can be found in 'src' dir"
+    entry_points={"console_scripts": ["cblack = comform.format_file:cli"]},
     # Get package version from git tags
     setup_requires=["setuptools_scm"],
     use_scm_version={
