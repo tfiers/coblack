@@ -1,6 +1,6 @@
-# CoBlack
+# Coblack
 
-_CoBlack_ is a <em><a href="https://black.readthedocs.io">Black</a></em>-compliant formatter/rewrapper for Python comments.
+_Coblack_ is a <em><a href="https://black.readthedocs.io">Black</a></em>-compliant formatter/rewrapper for Python comments.
 
 
 #### Example code
@@ -37,7 +37,7 @@ $ pip install coblack
 
 This will get you the [![latest release on PyPI](https://img.shields.io/pypi/v/coblack.svg?label=latest%20release%20on%20PyPI:)](https://pypi.python.org/pypi/coblack/)
 
-(Upgrade an existing installation of _CoBlack_ by adding the `--upgrade`/`-U` flag).
+(Upgrade an existing installation of Coblack by adding the `--upgrade`/`-U` flag).
 
 
 <br>
@@ -130,7 +130,7 @@ def care_for(self, favorite_plant):
     # Prevent dehydration.
 ```
 
-These styles don't need _CoBlack_;
+These styles don't need _Coblack_;
 a vanilla rewrapper like any of the following will do:
 - The [Wrap to Column](https://plugins.jetbrains.com/plugin/7234-wrap-to-column) plugin for PyCharm;
 - The [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap) extension for VS Code;
