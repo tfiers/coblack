@@ -8,7 +8,7 @@ with open("ReadMe.md", mode="r", encoding="utf-8") as f:
 
 setup(
     name="comform",
-    description="Wrap & fill out multiline comments in Python code, black-compliant",
+    description="Black-compliant formatter/rewrapper for Python comments.",
     author="Tomas Fiers",
     author_email="tomas.fiers@gmail.com",
     long_description=readme,
