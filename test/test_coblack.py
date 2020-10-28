@@ -2,7 +2,7 @@ from pathlib import Path
 from shutil import copyfile
 from subprocess import run
 
-from comform import format_file
+from coblack import format_file
 
 
 test_data_dir = Path(__file__).parent / "data"
@@ -25,11 +25,11 @@ def test_format_file():
 
 def test_cli():
     reset_temp_file()
-    result = run(["cblack", str(temp_file)])
+    result = run(["coblack", str(temp_file)])
     assert result.returncode == 0
     assert temp_file.read_text() == expected_output_file.read_text()
 
 
 def test_cli_not_a_file():
-    result = run(["cblack", "C:/"])
+    result = run(["coblack", "C:/"])
     assert result.returncode != 0

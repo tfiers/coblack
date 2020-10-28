@@ -1,13 +1,13 @@
 from setuptools import find_packages, setup
 
 
-GITHUB_URL = "https://github.com/tfiers/comform"
+GITHUB_URL = "https://github.com/tfiers/coblack"
 
 with open("ReadMe.md", mode="r", encoding="utf-8") as f:
     readme = f.read()
 
 setup(
-    name="comform",
+    name="coblack",
     description="Black-compliant formatter/rewrapper for Python comments.",
     author="Tomas Fiers",
     author_email="tomas.fiers@gmail.com",
@@ -31,7 +31,7 @@ setup(
     ],
     packages=find_packages("src"),
     package_dir={"": "src"},  # This means: "Root package can be found in 'src' dir"
-    entry_points={"console_scripts": ["cblack = comform.format_file:cli"]},
+    entry_points={"console_scripts": ["coblack = coblack.format_file:cli"]},
     # Get package version from git tags
     setup_requires=["setuptools_scm"],
     use_scm_version={
